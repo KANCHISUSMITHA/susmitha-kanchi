@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>doors</title>
+     <style>
+        body{
+            position: relative;
+            left: 35%;
+            top: 100px;
+        }
+        #main{
+            width: 250px;
+            height: 300px;
+            display: flex;
+            overflow: hidden;
+        }
+        img{
+            width: inherit;
+            height: inherit; 
+        }
+        #main:hover>img{
+            transition: all 5s linear;
+            transform: scale(1.2,1.2);
+        }
+        #door1{
+            background:linear-gradient(45deg,red,yellow,green,brown);
+            width:8.5%;
+            height:inherit;
+            transform-origin: left;
+            position:absolute;
+            left: 0;
+        }
+        #main:hover #door1{
+            transition: all 5s linear;
+            transform: perspective(400px)rotatey(90deg);
+
+            
+        }
+        #door2{
+            background:linear-gradient(45deg,red,yellow,green,brown);
+            width:8.6%;
+            height:inherit;
+            transform-origin: right;
+            position:absolute;
+            top:0;
+            left: 120px;
+        }
+        #main:hover #door2{
+            transition: all 5s linear;
+            transform: perspective(400px)rotatey(-90deg);
+        }
+     </style>
+</head>
+<body>
+    <div id="main">
+        <img src="C:\Users\91984\OneDrive\Desktop\vs code demo\translate,11.html" alt="">
+        <div id="door1"></div>
+        <div id="door2"></div>
+    </div>  
+</body>
+</html>
